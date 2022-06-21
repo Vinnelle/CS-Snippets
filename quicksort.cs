@@ -1,5 +1,4 @@
 /*
-
 The program I made uses the quick sort algorithm to sort an array of integers. It starts by creating an array of 256 random numbers. It then prints out the array, sorts it using quick sort, and then prints out the sorted array.
 */
 
