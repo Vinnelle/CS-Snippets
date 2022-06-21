@@ -11,7 +11,18 @@ namespace Bubble
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[256];
+            int[] nums;
+            try
+            {
+                nums = new int[2146435072]; //outofmemoryexception
+                if (nums.Length > 50000) //if num is like 2146435071 and doesnt throw outofmem, lets just set it to 256
+                    nums = new int[256];
+            }
+            catch (OutOfMemoryException)
+            {
+                nums = new int[256]; //default to 256
+                Console.WriteLine("OutOfMemoryException");
+            }
 
             for (int i = 0; i < nums.Length; i++)
             {
